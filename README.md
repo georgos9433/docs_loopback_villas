@@ -47,14 +47,14 @@
     make -f /usr/opalrt/common/bin/opalmodelmk
     ```  
     come mostrato in figura
-![alt text](compiler.png)
+![alt text](loopback_test_img/compiler.png)
 
 
 4. Nella tab variables se non presente per qualche ragione il compilatore sul sistema opal (si hanno errori riguardo al compiler GNU o gcc), impostare la variabile in figura (presente tra le predefinite premendo su "Add")
- ![alt text](compiler_var.png)
+ ![alt text](loopback_test_img/compiler_var.png)
 
 5. Nella tab files devono essere aggiunti i file precedentemente importati nella creazione del progetto come in figura seguente, assicurarsi che il transfer time sia impostato su "Before compilation":
- ![alt text](files.png)
+ ![alt text](loopback_test_img/files.png)
  i file possono essere imèportati per mezzo del tasto "Add" selezionando i file presenti nella root folder del progetto.
 
     **ATTENZIONE**
@@ -63,7 +63,7 @@
 
 
 6. Editando il progetto è necessario impostare ip e porte di comunicazione, la 12001 preimpostata dovrebbe essere libera sul pc per cui l'esempio sarà presentato con tale impostazione. L'IP da impostare sarà invece quello del PC su cui viene eseguita l'istanza villas. Nell'esempio in figura sostituire l'indirizzo evidenziato con quello corretto per il proprio setup.
-![alt text](ipset.png)
+![alt text](loopback_test_img/ipset.png)
 
 
 7. Salvare il progetto simulink e chiudere il file
@@ -73,13 +73,13 @@
     ```text
     docker run -it --rm -p 12001:12001/udp -p 8000:8000 -v "${PWD}:/data" --entrypoint /bin/bash  villas-node -c "villas node loopback_local.conf"
     ``` 
-    si dovrebbe restare in attesa del segnale da parte del simulatore come in figura: ![alt text](terminal.png)
+    si dovrebbe restare in attesa del segnale da parte del simulatore come in figura: ![alt text](loopback_test_img/terminal.png)
 
 
-11. Eseguire la simulazione con RT-Lab con il pulsante "Execute", nel terminale villas dovrebbero iniziare a comparire i dati inviati dal e per il simulatore: ![alt text](terminal_execute.png) Per fermare il villas è sufficiente premere Ctrl+C
+11. Eseguire la simulazione con RT-Lab con il pulsante "Execute", nel terminale villas dovrebbero iniziare a comparire i dati inviati dal e per il simulatore: ![alt text](loopback_test_img/terminal_execute.png) Per fermare il villas è sufficiente premere Ctrl+C
 
 
-12. La console della simulazione riportata di seguito ![alt text](console.png)
+12. La console della simulazione riportata di seguito ![alt text](loopback_test_img/console.png)
     Assicurarsi di avere eseguito villas prima di avviare la registrazione su file dei delay, altrimenti le misure verrebbero falsate.
 
 13. Reset della simulazione tramite RT-Lab. Al termine della simulazione il file con le misure dei delay verrà salvato nella cartella root del progetto nel workspace RT-Lab in un percorso simile a:
