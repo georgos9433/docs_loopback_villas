@@ -1,3 +1,7 @@
+# Guida loop back test
+## Pre requisiti
+- istanza funzionante di villas node eseguita tramite docker (nella presente guida si mostra il comando specifico per docker, ma il modello per il test dei delay può essere utilizzato con qualsiasi istanza villas correttamente funzionante).
+
 1. nella cartella dockerVillasNode creata per l'installazione del software villas node incollare il file "loopback_local.conf" contenente la seguente configurazione:
 
     ```json  
