@@ -1,6 +1,6 @@
 # Guida loop back test
 ## Pre requisiti
-- istanza funzionante di villas node eseguita tramite docker (nella presente guida si mostra il comando specifico per docker, ma il modello per il test dei delay può essere utilizzato con qualsiasi istanza villas correttamente funzionante).
+Istanza funzionante di villas node eseguita tramite docker (nella presente guida si mostra il comando specifico per docker, ma il modello per il test dei delay può essere utilizzato con qualsiasi istanza villas correttamente funzionante).
 
 1. nella cartella dockerVillasNode creata per l'installazione del software villas node incollare il file "loopback_local.conf" contenente la seguente configurazione:
 
@@ -39,13 +39,13 @@
     where "xxx.xxx.xxx.xxx" deve essere sostituito con l'indirizzo IP del simulatore.
 
 2. Importare il progetto simulink contenuto nel file zip "loopback_simulink.zip" in RT-Lab, assicurarsi che vengano importati tutti i file contenuti nell'archivio:
-```text
-   loopback_simulink
-   ├── loopback_model.slx
-   ├── AsyncIP.c
-   ├── AsyncIP.mk
-   └── AsyncIPUtils.h 
- ```  
+    ```text
+    loopback_simulink
+    ├── loopback_model.slx
+    ├── AsyncIP.c
+    ├── AsyncIP.mk
+    └── AsyncIPUtils.h 
+    ```  
 3. Inserire la seguente stringa nella tab Development/Compiler:
     ```text
     make -f /usr/opalrt/common/bin/opalmodelmk
